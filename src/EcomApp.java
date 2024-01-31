@@ -1,4 +1,4 @@
-public class Main {
+public class EcomApp {
     public static void main(String[] args) {
         User user = new User.UserBuilder("Steven", "Asis", "steven.asis@neu.edu.ph")
                 .address("Quezon City")

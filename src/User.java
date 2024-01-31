@@ -1,12 +1,12 @@
 public class User{
-    private final String firstName;
-    private final String lastName;
-    private final String email;
-    private final String address;
-    private final String phone;
-    private final int age;
+    protected final String firstName;
+    protected final String lastName;
+    protected final String email;
+    protected final String address;
+    protected final String phone;
+    protected final int age;
 
-    private User(UserBuilder builder){
+    User(UserBuilder builder){
         this.firstName = builder.firstName;
         this.lastName = builder.lastName;
         this.email = builder.email;
@@ -19,17 +19,30 @@ public class User{
         private final String firstName;
         private final String lastName;
         private final String email;
-        private final String address;
-        private final String phone;
-        private final int age;
+        private String address;
+        private String phone;
+        private int age;
 
-        public UserBuilder(String firstName, String lastName, String email, String address, String phone,int age){
+        public UserBuilder(String firstName, String lastName, String email){
             this.firstName = firstName;
             this.lastName = lastName;
             this.email = email;
+        }
+        public UserBuilder address(String address){
             this.address = address;
+            return this;
+        }
+        public UserBuilder phone(String phone){
             this.phone = phone;
+            return this;
+        }
+        public UserBuilder age(int age){
             this.age = age;
+            return this;
+        }
+
+        public User build() {
+            return new User(this);  
         }
     }
 

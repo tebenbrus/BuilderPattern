@@ -1,4 +1,6 @@
-#Problem Scenario
+# Builder Pattern
+
+##Problem Scenario##
 
 Imagine you're developing an e-commerce application where customers create accounts with varying levels of detail.
 
@@ -16,5 +18,5 @@ Optional fields: Not all customers provide complete information, but the constru
 Data consistency: Changes to user profiles after registration can cause unexpected issues due to mutable fields.
 Implement solution using the Builder Pattern to address the issue.
 
-##UML DIAGRAM
+## UML DIAGRAM
 ![Asis_lab1](https://github.com/tebenbrus/BuilderPattern/assets/114350433/c317d4f7-77de-4498-b94d-85c3d38e67d2)
